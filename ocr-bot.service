@@ -1,0 +1,14 @@
+[Unit]
+Description=OCR Translate Telegram Bot
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/ocr_translate_bot
+EnvironmentFile=/home/ubuntu/ocr_translate_bot/.env
+ExecStart=/home/ubuntu/ocr_translate_bot/venv/bin/python bot.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
