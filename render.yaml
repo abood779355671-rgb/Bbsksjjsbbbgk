@@ -2,9 +2,14 @@ services:
   - type: web
     name: ocr-translate-bot
     env: python
-    buildCommand: |
-      apt-get install -y poppler-utils libgl1 libglib2.0-0 && pip install -r requirements.txt
+    plan: free
+    pythonVersion: "3.11.9"
+    buildCommand: pip install -r requirements.txt
     startCommand: python bot.py
+    nativePackages:
+      - poppler-utils
+      - libgl1
+      - libglib2.0-0
     envVars:
       - key: API_ID
         sync: false
