@@ -1,4 +1,4 @@
-pyrogram==2.0.106
+pyrofork==2.3.37
 tgcrypto==1.2.5
 easyocr==1.7.1
 pdf2image==1.17.0
