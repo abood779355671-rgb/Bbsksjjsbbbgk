@@ -1,4 +1,6 @@
 import asyncio
+asyncio.set_event_loop(asyncio.new_event_loop())
+
 import logging
 import os
 from threading import Thread
